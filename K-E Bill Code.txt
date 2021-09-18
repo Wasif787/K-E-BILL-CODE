@@ -1,0 +1,31 @@
+K-E BILL CODE:
+
+import 'dart:io';
+
+void main() {
+  print("Pleasr Write Your Name:");
+  var A = (stdin.readLineSync());
+  print("Write a Billing Month:");
+  var B = (stdin.readLineSync());
+  print("Write Number of units:");
+  var C = (stdin.readLineSync());
+  print("Write a Charges per unit:");
+  var D = (stdin.readLineSync());
+
+  print('"K-E BILL"');
+  print("Customer Name : $A");
+  print("Billing Month: $B");
+  print("Number of units: $C");
+  print("Charges per unit: $D");
+
+  if (C != null && D != null) {
+    var num1 = num.parse(C);
+    var num2 = num.parse(D);
+    var E = num2 * num1;
+    print("Net Amount Payable (within Due Date): $E");
+    var F = (E / 12); // 2% Govt. Tax  and  10% of Original Bill
+    print("Late Payment Surcharge: $F");
+    var G = E + F;
+    print("Gross Amount Payable (after Due Date): $G");
+  }
+}
